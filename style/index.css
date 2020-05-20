@@ -4,7 +4,8 @@
 body{
     margin: 0;
     padding: 0 40px;
-    background-color: #1b1b1b;
+    /* background-color: #1b1b1b; */
+    background-color: #000;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -274,6 +275,17 @@ h1 {
      font-size: 40px;
      font-family: 'Monoton', cursive;
      margin: 0 15px;
+}
+
+@media only screen and (max-width: 600px) {
+    body{
+        padding: 0 20px;
+    }
+    h1 {
+        font-size: 20px;
+        margin: 0 5px;
+    }
+
 }
 
 
