@@ -15,7 +15,19 @@ body {
   overflow: hidden;
 }
 
-
+.left-section {
+  flex: 1;
+  padding: 40px;
+  background: #0c0407;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
 
 .left-section h1 {
   margin: 0;
@@ -36,7 +48,7 @@ body {
   margin-right: 10px;
 }
 
-.round-btn{
+.round-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -44,11 +56,10 @@ body {
   padding: 10px;
   border-radius: 100%;
   color: white;
-  background-color: #191919	;
+  background-color: #191919;
   height: 25px;
   width: 25px;
 }
-
 
 .copy-button {
   border: none;
@@ -58,44 +69,64 @@ body {
   font-size: 1rem;
 }
 
-
 .right-section {
   flex: 2;
   padding: 20px;
   background: white;
-  overflow-y: auto;
+  overflow: hidden;
 }
 
 .right-section iframe {
   border-radius: 8px;
+  width: 100%;
+  height: 100%;
 }
 
-
-.left-section {
-  flex: 1;
-  padding: 40px;
-  background: #0C0407;
-  /* background: linear-gradient(45deg, rgba(49, 54, 63, 0.7), rgba(34, 40, 49, 0.7)); */
-  background-size: 200% 200%; /* For animation */
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  backdrop-filter: blur(10px); /* Glass effect */
-  border-right: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
-  animation: gradientAnimation 10s ease infinite; /* Gradient animation */
-}
-
-@keyframes gradientAnimation {
-  0% {
-    background-position: 0% 50%;
+/* Media Query for Mobile Screens */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack sections vertically */
+    height: 100vh;
   }
-  50% {
-    background-position: 100% 50%;
+
+  .left-section {
+    padding: 20px; /* Reduce padding for mobile */
+    border-right: none; /* Remove right border */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Add bottom border */
   }
-  100% {
-    background-position: 0% 50%;
+
+  .left-section h1 {
+    font-size: 2rem; /* Smaller font size for mobile */
+  }
+
+  .left-section p {
+    font-size: 1rem; /* Smaller font size for mobile */
+  }
+
+  .social-links {
+    margin: 10px; /* Reduce margin for mobile */
+    gap: 10px; /* Add gap between social links */
+  }
+
+  .round-btn {
+    font-size: 1.2rem; /* Smaller font size for mobile */
+    padding: 8px; /* Reduce padding for mobile */
+    height: 20px; /* Smaller button size for mobile */
+    width: 20px; /* Smaller button size for mobile */
+  }
+
+  .copy-button {
+    height: 40px; /* Smaller button size for mobile */
+    width: 40px; /* Smaller button size for mobile */
+    font-size: 0.9rem; /* Smaller font size for mobile */
+  }
+
+  .right-section {
+    padding: 10px; /* Reduce padding for mobile */
+    height: 50vh; /* Set a fixed height for the PDF viewer */
+  }
+
+  .right-section iframe {
+    height: 100%; /* Ensure iframe fills the available height */
   }
 }
