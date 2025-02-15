@@ -1,6 +1,7 @@
 import React from "react";
-import { FaGithub, FaLinkedinIn, FaLink } from "react-icons/fa";
-import "./App.css";
+
+import "./styles/App.css";
+import { FaGithub, FaLinkedinIn, FaLink, FaDownload } from "react-icons/fa";
 
 function App() {
   const websiteURL = "https://sharmadipesh.github.io";
@@ -8,6 +9,15 @@ function App() {
   const copyToClipboard = () => {
     navigator.clipboard.writeText(websiteURL);
     alert("URL copied to clipboard!");
+  };
+
+  const downloadResume = () => {
+    const link = document.createElement("a");
+    link.href = "./resume.pdf";
+    link.download = "Dipesh_Sharma_Resume.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -24,7 +34,7 @@ function App() {
             target="_blank"
             rel="noopener noreferrer"
             className="round-btn"
-            href="https://linkedin.com/in/sharmadipesh"
+            href="www.linkedin.com/in/thedipesh"
           >
             <FaLinkedinIn className="icon" />
           </a>
@@ -38,6 +48,12 @@ function App() {
           </a>
           <button onClick={copyToClipboard} className="copy-button round-btn">
             <FaLink className="icon" />
+          </button>
+          <button
+            onClick={downloadResume}
+            className=" copy-button margin-left-10 round-btn"
+          >
+            <FaDownload className="icon" />
           </button>
         </div>
       </div>
