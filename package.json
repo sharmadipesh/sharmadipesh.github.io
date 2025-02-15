@@ -1,4 +1,5 @@
 {
+  "homepage": "https://sharmadipesh.github.io",
   "name": "sharmadipesh-portfolio",
   "private": true,
   "version": "0.0.0",
@@ -8,7 +9,8 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "predeploy": "npm run build"
   },
   "dependencies": {
     "react": "^19.0.0",
