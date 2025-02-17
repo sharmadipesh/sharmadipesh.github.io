@@ -32,16 +32,16 @@ function App() {
         <div className="social-links">
           <a
             target="_blank"
-            rel="noopener noreferrer"
             className="round-btn"
-            href="www.linkedin.com/in/thedipesh"
+            rel="noopener noreferrer"
+            href="https://www.linkedin.com/in/thedipesh"
           >
             <FaLinkedinIn className="icon" />
           </a>
           <a
             target="_blank"
-            rel="noopener noreferrer"
             className="round-btn"
+            rel="noopener noreferrer"
             href="https://github.com/sharmadipesh"
           >
             <FaGithub className="icon" />
